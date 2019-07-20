@@ -1,0 +1,18 @@
+{
+  "name": "codebuild-demo-project",
+  "source": {
+    "type": "CODECOMMIT",
+    "location": "https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/MyDemoRepo",
+	"buildspec": "buildspec.yml"
+  },
+  "artifacts": {
+    "type": "S3",
+    "location": "arn:aws:s3:::shekupblog"
+  },
+  "environment": {
+    "type": "LINUX_CONTAINER",
+    "image": "aws/codebuild/standard:2.0",
+    "computeType": "BUILD_GENERAL1_SMALL"
+  },
+  "serviceRole": "arn:aws:iam::327713938792:role/codeBuildRole"
+}
