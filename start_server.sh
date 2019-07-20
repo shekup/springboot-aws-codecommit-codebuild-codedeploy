@@ -1,2 +1,2 @@
-cd /home/ec2-user/deploy
+cd /home/ec2-user
 mvn spring-boot:run
